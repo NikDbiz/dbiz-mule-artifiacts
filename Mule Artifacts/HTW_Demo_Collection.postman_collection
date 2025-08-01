@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "af8d75b4-e510-4f02-8865-ab28fc8d8ce3",
+		"name": "dBiz Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40407201"
+	},
+	"item": [
+		{
+			"name": "System API",
+			"item": [
+				{
+					"name": "Post Properties",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dealType\": \"sale\",\r\n    \"propertyDetails\": [\r\n        {\r\n            \"property\": {\r\n                \"location\": {\r\n                    \"address\": {\r\n                        \"postCode\": \"8037\",\r\n                        \"city\": \"Zurich\",\r\n                        \"street\": \"Nordstrasse\",\r\n                        \"houseNumber\": \"391\"\r\n                    }\r\n                },\r\n                \"propertyType\": {\r\n                    \"code\": \"apartment\"\r\n                },\r\n                \"valuations\": [\r\n                    {\r\n                        \"valuation_date\": \"2025-06-01\",\r\n                        \"market_value\": 750000\r\n                    }\r\n                ],\r\n                \"owners\": [\r\n                    {\r\n                        \"name\": \"John Doe\"\r\n                    }\r\n                ],\r\n                \"documents\": [\r\n                    {\r\n                        \"docName\": \"property index2\",\r\n                        \"url\": \"https://documents/library/report.pdf\"\r\n                    },\r\n                    {\r\n                        \"docName\": \"property sale deed\",\r\n                        \"url\": \"https://documents/library/sale-deed.pdf\"\r\n                    }\r\n                ]\r\n                ,\r\n                \"buildingYear\": \"1990\",\r\n                \"livingArea\": \"1000 sqft\"\r\n            }\r\n        }\r\n    ],\r\n    \"countryCode\": \"CH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dbiz-microservices-sys-api-a9no7y.5sc6y6-1.usa-e2.cloudhub.io/api/property",
+							"protocol": "https",
+							"host": [
+								"dbiz-microservices-sys-api-a9no7y",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"property"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Documents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dbiz-microservices-sys-api-a9no7y.5sc6y6-1.usa-e2.cloudhub.io/api/documents/CH22",
+							"protocol": "https",
+							"host": [
+								"dbiz-microservices-sys-api-a9no7y",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"documents",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Owner",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dbiz-microservices-sys-api-a9no7y.5sc6y6-1.usa-e2.cloudhub.io/api/owners/CH22",
+							"protocol": "https",
+							"host": [
+								"dbiz-microservices-sys-api-a9no7y",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"owners",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get valuations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dbiz-microservices-sys-api-a9no7y.5sc6y6-1.usa-e2.cloudhub.io/api/valuations/CH22",
+							"protocol": "https",
+							"host": [
+								"dbiz-microservices-sys-api-a9no7y",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"valuations",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get location",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dbiz-microservices-sys-api-a9no7y.5sc6y6-1.usa-e2.cloudhub.io/api/location/CH22",
+							"protocol": "https",
+							"host": [
+								"dbiz-microservices-sys-api-a9no7y",
+								"5sc6y6-1",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"location",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exp API",
+			"item": [
+				{
+					"name": "GET LocationInspection_vendor",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "b81aa9d4aa3945758fc17dc69f413108",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "81164Fd865994ab8909497cCc3Dd4631",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-exp-api-a9no7y.5sc6y6-3.usa-e2.cloudhub.io/api/v1/propertyDetails/CH22",
+							"protocol": "https",
+							"host": [
+								"htw-demo-exp-api-a9no7y",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"propertyDetails",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET DocumentInspection_vendor",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "8afc7b0339784387a6500dad26191480",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "f637895DC99E4bFD9D6E8E14B918064C",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-exp-api-a9no7y.5sc6y6-3.usa-e2.cloudhub.io/api/v1/propertyDetails/CH22",
+							"protocol": "https",
+							"host": [
+								"htw-demo-exp-api-a9no7y",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"propertyDetails",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Client_partner",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "117e994bbc4f4f4eafcb037993f58f21",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "3202a759f46c468b8e7FeEF8a159C01D",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-exp-api-a9no7y.5sc6y6-3.usa-e2.cloudhub.io/api/v1/propertyDetails/CH22",
+							"protocol": "https",
+							"host": [
+								"htw-demo-exp-api-a9no7y",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"propertyDetails",
+								"CH22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Property Details",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "117e994bbc4f4f4eafcb037993f58f21",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "3202a759f46c468b8e7FeEF8a159C01D",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-exp-api-a9no7y.5sc6y6-3.usa-e2.cloudhub.io/api/v1/propertyDetails",
+							"protocol": "https",
+							"host": [
+								"htw-demo-exp-api-a9no7y",
+								"5sc6y6-3",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"propertyDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Process API",
+			"item": [
+				{
+					"name": "CH_GET_PropertyDetails - Partner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Client_Id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "Client_Secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							},
+							{
+								"key": "clientName",
+								"value": "client_partner",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-process-api-a9no7y.5sc6y6-4.usa-e2.cloudhub.io/api/propertyDetails/CH212",
+							"protocol": "https",
+							"host": [
+								"htw-demo-process-api-a9no7y",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"propertyDetails",
+								"CH212"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CH_GET_PropertyDetails - Location",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Client_Id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "Client_Secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							},
+							{
+								"key": "clientName",
+								"value": "locationInspection_vendor",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-process-api-a9no7y.5sc6y6-4.usa-e2.cloudhub.io/api/propertyDetails/CH212",
+							"protocol": "https",
+							"host": [
+								"htw-demo-process-api-a9no7y",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"propertyDetails",
+								"CH212"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CH_GET_PropertyDetails - Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Client_Id",
+								"value": "6e620afc7f8741009401919d0e1266e2",
+								"type": "text"
+							},
+							{
+								"key": "Client_Secret",
+								"value": "2a6C031F0D9C4Af9895bEE7512dDAD04",
+								"type": "text"
+							},
+							{
+								"key": "clientName",
+								"value": "documentInspection_vendor",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://htw-demo-process-api-a9no7y.5sc6y6-4.usa-e2.cloudhub.io/api/propertyDetails/CH212",
+							"protocol": "https",
+							"host": [
+								"htw-demo-process-api-a9no7y",
+								"5sc6y6-4",
+								"usa-e2",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"propertyDetails",
+								"CH212"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
