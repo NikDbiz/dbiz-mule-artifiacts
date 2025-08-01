@@ -1,0 +1,9 @@
+{
+    "responseCode": 200,
+    "correlationId": "f412a33b-7d81-47c7-a76b-34d02296668c",
+    "timestamp": "2025-07-17T12:59:55.16857Z",
+    "details": {
+        "propertyId" : "CH212",
+        "description": "property created successfully"
+    }
+}

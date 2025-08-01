@@ -1,0 +1,45 @@
+{
+    "dealType": "sale",
+    "propertyDetails": [
+        {
+            "property": {
+                "location": {
+                    "address": {
+                        "postCode": "8037",
+                        "city": "Zurich",
+                        "street": "Nordstrasse",
+                        "houseNumber": "391"
+                    }
+                },
+                "propertyType": {
+                    "code": "apartment"
+                },
+                "valuations": [
+                    {
+                        "valuation_date": "2025-06-01",
+                        "market_value": 750000
+                    }
+                ],
+                "owners": [
+                    {
+                        "name": "John Doe"
+                    }
+                ],
+                "documents": [
+                    {
+                        "docName": "property index2",
+                        "url": "https://documents/library/report.pdf"
+                    },
+                    {
+                        "docName": "property sale deed",
+                        "url": "https://documents/library/sale-deed.pdf"
+                    }
+                ]
+                ,
+                "buildingYear": "1990",
+                "livingArea": "1000 sqft"
+            }
+        }
+    ],
+    "countryCode": "CH"
+}
